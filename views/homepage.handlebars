@@ -1,0 +1,17 @@
+{{#each blogs as |blog| }}
+<div class="homepage row mb-4 project">
+    <div class="homepagehead">
+        <h2>
+            <a href="/blog/{{blog.id}}">{{blog.name}}</a>
+        </h2>
+        <p>
+        </p>
+        <p>Created by {{blog.user.name}}</p>
+    </div>
+    <div class="homepagebody">
+        <p>
+            {{blog.description}}
+        </p>
+    </div>
+</div>
+{{/each}}

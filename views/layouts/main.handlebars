@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech blargh</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="containerone">
+        <header class="headerone p-2">
+            <a href="/">
+                <button>Tech Blargh</button>
+            </a>
+            <nav id="navone">
+                <!-- Conditionally render login or logout links -->
+                {{#if logged_in}}
+                <a href="/">Home</a> |
+                <a href="/profile">Dashboard</a> |
+                <a class="no-button" id="logout">Logout</a>
+                {{else}}
+                <a href="/">Home</a> |
+                <a href="/login">Login</a>
+                {{/if}}
+            </nav>
+        </header>
+        <main class="container container-fluid mt-5">
+            <!-- Render the sub layout -->
+            {{{ body }}}
+
+        </main>
+        <footer>
+            <p>Copyright © <a href="https://www.github.com/ayesslee"> Alex Lee</p></a>
+        </footer>
+    </div>
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>

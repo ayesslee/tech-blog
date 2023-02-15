@@ -1,331 +1,372 @@
-:root {
-    --primary: #ccdad1;
-    --secondary: #dce9d5;
-    --tertiary: #788585;
-    --light-dark: #a1a0a1;
-    --dark: #201110;
-    --border-radius: .3rem;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 body {
-    background-color: var(--primary);
-    margin: 0;
+    background-color: rgb(47, 113, 167);
+}
+
+.no-button {
+    background: none;
+    border: none;
     padding: 0;
-    font-family: "IBM Plex Sans", sans-serif;
-    color: var(--dark);
-    line-height: 1.5;
-    font-size: 24px;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
 }
 
-h1,
-h2,
-h3,
-h5,
-h6 {
-    font-weight: 700;
-    margin: 0;
-    color: var(--dark);
-    line-height: 1.25;
+.no-button:hover {
+    color: #065b83;
+    text-decoration: underline;
 }
 
-.link-color {
-    color: var(--tertiary);
-    padding: 10px;
-    margin: 10px
-}
-
-main {
-    margin: 20px auto;
-    width: 94%;
-}
-
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
+.containerone {
     display: flex;
     flex-direction: column;
-}
-
-p {
-    font-size: 1.2rem;
-}
-
-.btn {
-    font-size: 1.3rem;
-    text-decoration: none;
-    padding: 6px 5px;
+    justify-content: space-around;
     width: 100%;
-    display: block;
-    margin: 5px 0;
-    border-radius: var(--border-radius);
-    color: white;
-    border: none;
-    outline: none;
-    background-color: var(--light-dark);
-    transform: translate(-1px, -1px);
 }
 
-.btn:hover {
-    color: var(--primary);
-    background-color: var(--tertiary);
-    transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+.headerone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(4, 44, 59);
+    color: rgb(210, 240, 229);
+    width: 100%;
 }
 
-.btn-inline {
-    display: inline;
-}
-
-.btn-back {
-    border-radius: var(--border-radius);
-    color: var(--primary);
-    border: none;
-    outline: none;
-    background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--secondary);
-    transform: translate(-1px, -1px);
-    display: inline-block;
-    width: auto;
-    margin-top: 20px;
+.headerone button {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px;
+    margin-left: 30px;
     padding: 15px;
+    background-color: rgb(210, 240, 229);
+    color: rgb(148, 150, 66);
+    border-radius: 5%;
+    box-shadow: 5px 5px rgb(176, 189, 184);
+    border-style: none;
+}
+
+.headerone button:active {
+    box-shadow: 4px 4px #666;
+    transform: translateY(3px);
+    transform: translateX(3px);
+}
+
+#navone {
+    color: rgb(210, 240, 229);
+}
+
+#navone a {
+    color: rgb(210, 240, 229);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 20px;
+    margin: 15px;
 }
 
-.btn-back:hover {
-    color: var(--primary);
-    background-color: var(--tertiary);
-    transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+#navone a:active {
+    color: rgb(150, 174, 165)
 }
 
-.hero {
-    padding: 3% 4%;
-    background-color: var(--dark);
-    color: var(--primary);
-}
-
-.hero p {
-    max-width: 75%;
-}
-
-.app-title {
-    font-size: 3rem;
-    background-color: var(--primary);
-    color: var(--dark);
-    padding: 0 10px;
-    display: inline-block;
-    border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
-}
-
-.list-group {
-    padding: 0;
-    list-style: none;
-}
-
-.list-item {
-    margin-bottom: 10px;
-    padding: 1.5%;
-    border-radius: var(--border-radius);
-    background-color: var(--light-dark);
-    color: var(--primary);
-    text-decoration: none;
-}
-
-.list-item:hover {
-    background-color: var(--dark);
-}
-
-.status-icon {
-    padding: 2px 5px;
-    margin: 0 5px;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: var(--border-radius);
-}
-
-.icon-danger {
-    color: rgb(255, 70, 70);
-}
-
-.icon-success {
-    color: rgb(29, 153, 255);
-}
-
-.card {
-    margin: 0 0 20px 0;
-    border: 2px solid var(--dark);
-    border-radius: var(--border-radius);
-}
-
-.card-header {
-    color: var(--primary);
-    background-color: var(--dark);
-    padding: 1%;
-    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
-}
-
-.card-body {
-    padding: 1%;
-}
-
-h4 {
-    font-weight: 700;
-    margin: 0;
-    color: var(--light-dark);
-    line-height: 1.25;
-}
-
-.link {
-    color: var(--light-dark);
-}
-
-.login-link {
-    color: var(--dark);
-}
-
-.nav {
-    padding: 10px;
-    line-height: 1.25;
-    float: top;
-}
-
-footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
-}
-
-.form-label,
-.form-input,
-.form-textarea {
-    display: block;
-}
-
-.form-label {
-    font-size: 1.1rem;
-    margin: 0 0 0 5px;
-}
-
-.form-input {
-    width: 100%;
-    padding: 3%;
-    margin: 5px 0;
-    font-size: 1.2rem;
-    border: 2px solid var(--light-dark);
-    border-radius: var(--border-radius);
-}
-
-.min-100-vh {
-    min-height: 100vh;
-}
-
-.min-100-vw {
-    min-width: 100vw;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-
-.flex-row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flex-column {
+.blogcontainer {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
-.justify-space-between {
+.homepage {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: rgb(210, 240, 229);
+    color: rgb(4, 44, 59);
+    border-style: solid;
+    border-color: rgb(56, 27, 8);
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.homepagehead {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgb(4, 44, 59);
+    color: rgb(176, 189, 184);
+}
+
+.homepagehead h2 {
+    margin: 10px;
+}
+
+.homepagehead a {
+    color: rgb(176, 189, 184);
+    text-decoration: none;
+    margin: 10px;
+}
+
+.homepagehead p {
+    margin: 10px;
+}
+
+.homepagebody p {
+    margin: 15px;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-form,
+.signup-form,
+.makepost-form,
+.makecomment-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: rgb(210, 240, 229);
+    color: rgb(4, 44, 59);
+    border-style: solid;
+    border-color: rgb(4, 44, 59);
+    border-width: 3px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.email,
+.password,
+.namez,
+.post-title,
+.post-body {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.login input,
+.makepost-form input {
+    border-radius: 5px;
+    border-style: hidden;
+    margin: 5px;
+    padding: 8px;
+}
+
+.login label,
+.makepost-form label,
+.makecomment-form label {
+    margin-left: 5px;
+}
+
+.submitbtn,
+.signupbtn,
+.cancelbtn,
+.postupdatebtn,
+.postdeletebtn {
+    display: flex;
+    margin: 5px;
+}
+
+.signupbtn button,
+.submitbtn button,
+.cancelbtn button,
+.postdeletebtn button,
+.postupdatebtn button,
+.cancelbtn a {
+    display: flex;
+    border-radius: 5px;
+    border-style: hidden;
+    margin: 5px;
+    padding: 8px;
+    background-color: rgb(176, 189, 184);
+    width: 100%;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(56, 27, 8);
+}
+
+.signupbtn button:active,
+.submitbtn button:active,
+.cancelbtn button:active,
+.postupdatebtn button:active,
+.postdeletebtn button:active,
+.cancelbtn a:active {
+    background-color: rgb(131, 141, 137);
+
+}
+
+.login h2,
+.post-head h2 {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.login-head,
+.post-head {
+    background-color: rgb(4, 44, 59);
+    color: rgb(210, 240, 229);
+}
+
+.hidderbtn {
+    display: flex;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.hidderbtn button {
+    border-style: hidden;
+    background-color: rgb(210, 240, 229);
+    color: rgb(102, 110, 107);
+}
+
+.hidderbtn button:active {
+    color: rgb(136, 163, 154);
+}
+
+.signcard,
+.makepostcard {
+    display: none;
+    width: 100%;
+}
+
+.logincard,
+.log-list {
+    display: flex;
+    width: 100%;
+}
+
+.newpostbtn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    bottom: 10%;
+}
+
+.newpostbtn button {
+    display: flex;
+    background-color: rgb(56, 27, 8);
+    color: rgb(210, 240, 229);
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 15px 25px 15px 25px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.newpostbtn button:active {
+    background-color: rgb(98, 48, 14);
+}
+
+.makepost-form textarea,
+.makecomment-form textarea {
+    border-radius: 5px;
+    border-style: hidden;
+    margin: 5px;
+    padding: 8px;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.log-list {
+    flex-direction: column;
+    width: 100%;
+}
+
+.myblogpost {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(102, 110, 107);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.myblogcontainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     justify-content: space-between;
 }
 
-.justify-space-around {
-    justify-content: space-around;
+.myblogcontainer2 {
+    display: flex;
+    flex-direction: row;
 }
 
-.justify-flex-start {
-    justify-content: flex-start
+.myblogpost a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
 }
 
-.justify-flex-end {
-    justify-content: flex-end;
+.myblogpost p {
+    color: whitesmoke;
+    margin: 10px;
+    align-self: center;
 }
 
-.justify-center {
+.makecommentcard {
+    display: flex;
+    width: 100%;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: rgb(210, 240, 229);
+    color: rgb(56, 27, 8);
+    border-bottom: solid;
+    border-color: rgb(56, 27, 8);
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.commentinfo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.text-commentz {
+    margin-left: 10px;
+}
+
+#editbtn {
+    font-size: 15px;
+    align-self: center;
+}
+
+.makeeditcard {
+    display: flex;
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    bottom: 0%;
+    background-color: rgb(4, 44, 59);
+    color: rgb(210, 240, 229);
+    width: 100%;
     justify-content: center;
-}
-
-.align-stretch {
-    align-items: stretch;
-}
-
-.align-end {
-    align-items: flex-end;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.col-auto {
-    flex-grow: 1;
-}
-
-.col-1 {
-    flex: 0 0 calc(100% * 1 / 12 - 2%);
-}
-
-.col-2 {
-    flex: 0 0 calc(100% * 2 / 12 - 2%);
-}
-
-.col-3 {
-    flex: 0 0 calc(100% * 3 / 12 - 2%);
-}
-
-.col-4 {
-    flex: 0 0 calc(100% * 4 / 12 - 2%);
-}
-
-.col-5 {
-    flex: 0 0 calc(100% * 5 / 12 - 2%);
-}
-
-.col-6 {
-    flex: 0 0 calc(100% * 6 / 12 - 2%);
-}
-
-.col-7 {
-    flex: 0 0 calc(100% * 7 / 12 - 2%);
-}
-
-.col-8 {
-    flex: 0 0 calc(100% * 8 / 12 - 2%);
-}
-
-.col-9 {
-    flex: 0 0 calc(100% * 9 / 12 - 2%);
-}
-
-.col-10 {
-    flex: 0 0 calc(100% * 10 / 12 - 2%);
-}
-
-.col-11 {
-    flex: 0 0 calc(100% * 11 / 12 - 2%);
-}
-
-.col-12 {
-    flex: 0 0 100%;
+    left: 0%;
+    height: 38px;
 }

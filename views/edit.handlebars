@@ -1,0 +1,31 @@
+<div class="blogcontainer">
+    <p>{{{get_emoji}}}</p>
+
+    <div class="col-md-6 makeeditcard">
+        <form class="form makepost-form">
+            <div class="post-head">
+                <h2>Edit Post</h2>
+            </div>
+            <div class="form-group post-title">
+                <label for="blog-name">Post Title</label>
+                <input class="form-input" type="text" id="blog-name" name="blog-name" value="{{name}}" />
+            </div>
+            <div class="form-group post-body">
+                <label for="blog-desc">Content</label>
+                <textarea class="form-input" id="blog-desc" name="blog-desc">{{description}}</textarea>
+            </div>
+            <div class="form-group postupdatebtn" data-id="{{id}}">
+                <button class=" btn btn-primary" type="submit">Update</button>
+            </div>
+            <div class="form-group postdeletebtn">
+                <button class="btn btn-primary" type="submit" data-id="{{id}}">Delete</button>
+            </div>
+            <div class="form-group cancelbtn">
+                <a class="btn btn-primary" href="/profile">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="/js/update.js"></script>

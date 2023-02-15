@@ -1,19 +1,16 @@
-// connect handlebar with route
+// connects handlebar post comment button with route 
 async function commentFormHandler(event) {
     event.preventDefault();
 
-    const comment_text = document.querySelector('input[name="comment-body"]').value.trim();
+    const commentBody = document.querySelector('#comment').value.trim();
+    const blogId = document.querySelector('input[name="blog-id"]').value;
 
-    const post_id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-    ];
-
-    if (comment_text) {
+    if (commentBody) {
         const response = await fetch('/api/comments', {
             method: 'POST',
             body: JSON.stringify({
-                post_id,
-                comment_text
+                blogId,
+                commentBody
             }),
             headers: {
                 'Content-Type': 'application/json'
@@ -22,12 +19,11 @@ async function commentFormHandler(event) {
 
         if (response.ok) {
             document.location.reload();
-
         } else {
-            alert(response.statusText);
-            document.querySelector('#comment-form').style.display = "block";
+            console.log("Unable to post")
+            alert("You cannot view this");
         }
     }
 }
 
-document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+document.querySelector('.makecomment-form').addEventListener('submit', commentFormHandler);
